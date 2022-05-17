@@ -3,7 +3,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <title>Main / Landing Page</title>
-    <link rel="stylesheet" href="/server/public/css/index.css">
+    <link rel="stylesheet" href="/server/public/css/index.css" defer>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" defer>
+    
+    
 </head>
 
 <body>
@@ -15,9 +18,24 @@
                 </div>
                 <div class="search-field">
                     <button class="search-button">
-                        <img src="/server/public/img/loupe.png" class="search-icon"/>
+                      <i class="material-icons" id="search-icon">search</i>
                     </button>
+                    <input class="search">
                 </div>
+                <div class="buttons">
+                  <button class="button">
+                    Home
+                  </button>
+                  <button class="button">
+                    Movies
+                  </button>
+                  <button class="button">
+                    Account
+                  </button>
+                </div>
+              <div class="burgor">
+                <i class="material-icons" id="borgor-menu">menu</i>
+              </div>
             </div>
         </header-container>
     </header>
