@@ -41,7 +41,7 @@ header {
 }
 
 .logout-button {
-    font-size: 24px;
+    font-size: 18px;
     padding-left: 22px;
     padding-right: 22px;
     padding-top: 10px;
@@ -77,6 +77,15 @@ button:hover {
     max-width: 32px;
     max-height: 32px;
     flex-grow: 1;
+    background: transparent;
+    border: none;
+    border-style: none;
+}
+
+.search {
+  outline: 0;
+  border: none;
+  color: black;
 }
 
 .buttons {
@@ -92,12 +101,15 @@ button:hover {
   background: none;
   border: none;
   border-style: none;
+  font-size: 13px;
 }
 
 .burgor {
     display: flex;
     cursor: pointer;
     flex-grow: .3;
+    justify-content: center;
+    align-items: center;
   
 } /* need to make this burger menu responsive - DOM ;( */
 
