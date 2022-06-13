@@ -1,105 +1,174 @@
 * {
-    font-family: 'PT Sans', sans-serif;
-    color: #fff;
+	font-family: "PT Sans", sans-serif;
+	color: #fff;
 }
 
 body {
-    background-color: #202124ed;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
+	background-color: #202124ed;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
 }
 
 header-container {
-    z-index: 2;
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-grow: 1;
+	z-index: 2;
+	padding-left: 20px;
+	padding-right: 20px;
+	flex-grow: 1;
 }
 
 header {
-    display: flex;
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    flex-direction: row;
-    z-index: 101;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 6px;
+	display: flex;
+	position: sticky;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	flex-direction: row;
+	z-index: 101;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 6px;
 }
 
 .header-content {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
+	display: flex;
+	padding: 20px;
+	gap: 30px;
 }
 
 .logout-btn-container {
-    display: flex;
+	display: flex;
 }
 
 .logout-button {
-    font-size: 24px;
-    padding-left: 22px;
-    padding-right: 22px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    background: linear-gradient(90deg, #FF4E50 0%,  #F9D423 100%);
-    cursor: pointer;
+	font-size: 18px;
+	padding-left: 22px;
+	padding-right: 22px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: none;
+	border-radius: 4px;
+	background: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+	cursor: pointer;
+    box-shadow: 0px 0px 20px 0px #fe6c01 ,0px 0px 20px 0px #e6f10e ;
+
 }
 button:hover {
-  
-  transition: 10s;
-}
+	transition: all .1s ease-in-out;
+} /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! FINISH THIS TODAY (23rd) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* https://angrytools.com/css-generator/box-shadow/ */
 
 .search-field {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
 }
 
 .search-button {
-    display: flex;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 50px;
+	display: flex;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 50px;
 }
 
 #search-icon {
-    display: flex;
-    max-width: 32px;
-    max-height: 32px;
-    flex-grow: 1;
+	display: flex;
+	max-width: 32px;
+	max-height: 32px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	background: transparent;
+	border: none;
+	border-style: none;
+}
+
+.search {
+	display: flex;
+	outline: 0;
+	border: none;
+	color: #fff;
+	background-color: transparent;
+	border-bottom: solid 2px #fff;
+	flex-grow: 0.8;
 }
 
 .buttons {
-    display: flex;
-    background: none;
-    border: none;
-    border-style: none;
-    gap: 20px;
+	display: flex;
+	background: none;
+	border: none;
+	border-style: none;
+	gap: 40px;
+	flex-grow: 0.01;
 }
 
 .button {
-  cursor: pointer;
-  background: none;
-  border: none;
-  border-style: none;
+	cursor: pointer;
+	background: none;
+	border: none;
+	border-style: none;
+	font-size: 13px;
 }
 
-.burgor {
-    display: flex;
-    cursor: pointer;
-    flex-grow: .3;
-  
-} /* need to make this burger menu responsive - DOM ;( */
+/* start of burger-menu css:... */
+.menu-btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
 
+.menu-btn_burger {
+	width: 40px;
+	height: 3px;
+	background: #fff;
+	border-radius: 5px;
+	transition: all 0.5s ease-in-out;
+}
 
-/* this is where the main content starts */ 
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 3px;
+	background: #fff;
+	border-radius: 5px;
+	transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before {
+	transform: translateY(-10px);
+}
+.menu-btn_burger::after {
+	transform: translateY(10px);
+}
+
+/* burger menu animation */
+.menu-btn.open .menu-btn_burger {
+	transform: translateX(-50px);
+	background: transparent;
+	box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+	transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after {
+	transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* end of burger menu & animation */
+
+/* this is where the main content starts */
+
+content {
+	display: flex;
+	min-height: 100%;
+}

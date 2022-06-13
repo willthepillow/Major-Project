@@ -1,0 +1,19 @@
+{
+  "name": "major-project",
+  "version": "0.0.1",
+  "description": "A website that will torrent and track movies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willthepillow/Major-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willthepillow/Major-Project/issues"
+  },
+  "homepage": "https://github.com/willthepillow/Major-Project#readme"
+}
