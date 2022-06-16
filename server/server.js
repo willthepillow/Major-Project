@@ -3,7 +3,7 @@ const express = require("express");
 const app = express()
 const path = require("path")
 //importing custom middleware from /middleware/logEvents.js:
-const { logger } = require("./middlware/logger")
+const { logger } = require("./middlware/logger.js")
 const PORT = process.env.PORT || 3500;
 
 //custom middleware - logger

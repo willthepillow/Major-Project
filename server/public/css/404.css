@@ -48,7 +48,7 @@ h1 {
     font-weight: 600;
     font-size: 66px;
     background: linear-gradient(90deg, rgba(254,108,1,1) 0%, rgba(230,241,14,1) 100%);     
-    -webkit-background-clip: text;
+    --webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -57,7 +57,7 @@ p {
     font-weight: 600;
     font-size: 30px;
     background: linear-gradient(90deg, rgba(254,108,1,1) 0%, rgba(230,241,14,1) 100%);     
-    -webkit-background-clip: text;
+    --webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
